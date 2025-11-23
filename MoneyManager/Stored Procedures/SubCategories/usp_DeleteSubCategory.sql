@@ -1,22 +1,22 @@
-﻿CREATE PROCEDURE [lookup].[usp_DeleteSetting]
-    @SettingId BIGINT
+﻿CREATE PROCEDURE [lookup].[usp_DeleteSubCategory]
+    @SubCategoryId INT
 AS
 BEGIN
     SET NOCOUNT ON;
 
     -------------------------------------------------------------------------
-    -- Check if setting exists
+    -- Check if subcategory exists
     -------------------------------------------------------------------------
-    IF NOT EXISTS (SELECT 1 FROM [lookup].[Settings] WHERE SettingId = @SettingId)
+    IF NOT EXISTS (SELECT 1 FROM [lookup].[SubCategories] WHERE SubCategoryId = @SubCategoryId)
     BEGIN
-        RAISERROR('Setting not found.', 16, 1);
+        RAISERROR('SubCategory not found.', 16, 1);
         RETURN;
     END
 
     -------------------------------------------------------------------------
     -- Perform DELETE
     -------------------------------------------------------------------------
-    DELETE FROM [lookup].[Settings]
-    WHERE SettingId = @SettingId;
+    DELETE FROM [lookup].[SubCategories]
+    WHERE SubCategoryId = @SubCategoryId;
 END
 GO

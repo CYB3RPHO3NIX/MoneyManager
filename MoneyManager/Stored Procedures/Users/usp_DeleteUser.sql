@@ -1,22 +1,22 @@
-﻿CREATE PROCEDURE [lookup].[usp_DeleteSetting]
-    @SettingId BIGINT
+﻿CREATE PROCEDURE [identity].[usp_DeleteUser]
+    @UserId BIGINT
 AS
 BEGIN
     SET NOCOUNT ON;
 
     -------------------------------------------------------------------------
-    -- Check if setting exists
+    -- Check if user exists
     -------------------------------------------------------------------------
-    IF NOT EXISTS (SELECT 1 FROM [lookup].[Settings] WHERE SettingId = @SettingId)
+    IF NOT EXISTS (SELECT 1 FROM [identity].[Users] WHERE UserId = @UserId)
     BEGIN
-        RAISERROR('Setting not found.', 16, 1);
+        RAISERROR('User not found.', 16, 1);
         RETURN;
     END
 
     -------------------------------------------------------------------------
     -- Perform DELETE
     -------------------------------------------------------------------------
-    DELETE FROM [lookup].[Settings]
-    WHERE SettingId = @SettingId;
+    DELETE FROM [identity].[Users]
+    WHERE UserId = @UserId;
 END
 GO

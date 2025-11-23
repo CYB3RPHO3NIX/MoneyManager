@@ -1,22 +1,22 @@
-﻿CREATE PROCEDURE [lookup].[usp_DeleteSetting]
-    @SettingId BIGINT
+﻿CREATE PROCEDURE [data].[usp_DeleteBudget]
+    @BudgetId BIGINT
 AS
 BEGIN
     SET NOCOUNT ON;
 
     -------------------------------------------------------------------------
-    -- Check if setting exists
+    -- Check if budget exists
     -------------------------------------------------------------------------
-    IF NOT EXISTS (SELECT 1 FROM [lookup].[Settings] WHERE SettingId = @SettingId)
+    IF NOT EXISTS (SELECT 1 FROM [data].[Budgets] WHERE BudgetId = @BudgetId)
     BEGIN
-        RAISERROR('Setting not found.', 16, 1);
+        RAISERROR('Budget not found.', 16, 1);
         RETURN;
     END
 
     -------------------------------------------------------------------------
     -- Perform DELETE
     -------------------------------------------------------------------------
-    DELETE FROM [lookup].[Settings]
-    WHERE SettingId = @SettingId;
+    DELETE FROM [data].[Budgets]
+    WHERE BudgetId = @BudgetId;
 END
 GO

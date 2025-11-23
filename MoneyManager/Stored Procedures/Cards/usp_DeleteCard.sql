@@ -1,22 +1,22 @@
-﻿CREATE PROCEDURE [lookup].[usp_DeleteSetting]
-    @SettingId BIGINT
+﻿CREATE PROCEDURE [data].[usp_DeleteCard]
+    @CardId BIGINT
 AS
 BEGIN
     SET NOCOUNT ON;
 
     -------------------------------------------------------------------------
-    -- Check if setting exists
+    -- Check if card exists
     -------------------------------------------------------------------------
-    IF NOT EXISTS (SELECT 1 FROM [lookup].[Settings] WHERE SettingId = @SettingId)
+    IF NOT EXISTS (SELECT 1 FROM [data].[Cards] WHERE CardId = @CardId)
     BEGIN
-        RAISERROR('Setting not found.', 16, 1);
+        RAISERROR('Card not found.', 16, 1);
         RETURN;
     END
 
     -------------------------------------------------------------------------
-    -- Perform DELETE
+    -- Perform delete
     -------------------------------------------------------------------------
-    DELETE FROM [lookup].[Settings]
-    WHERE SettingId = @SettingId;
+    DELETE FROM [data].[Cards]
+    WHERE CardId = @CardId;
 END
 GO

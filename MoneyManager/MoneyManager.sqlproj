@@ -99,9 +99,12 @@
     <Build Include="Stored Procedures\Cards\usp_AddCard.sql" />
     <Build Include="Stored Procedures\Budgets\usp_AddBudget.sql" />
     <Build Include="Stored Procedures\SubCategories\usp_AddSubCategory.sql" />
-    <Build Include="Stored Procedures\Accounts\usp_DeleteTransaction.sql" />
-    <Build Include="Stored Procedures\Accounts\usp_GetTransactionById.sql" />
     <Build Include="Stored Procedures\Common\usp_ExecuteXmlQuery.sql" />
+    <Build Include="Stored Procedures\Transactions\usp_DeleteTransaction.sql" />
+    <Build Include="Stored Procedures\Categories\usp_DeleteCategory.sql" />
+    <Build Include="Stored Procedures\Categories\usp_UpdateCategory.sql" />
+    <Build Include="Stored Procedures\Settings\usp_UpdateSetting.sql" />
+    <Build Include="Stored Procedures\Settings\usp_DeleteSetting.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MoneyManager.publish.xml" />

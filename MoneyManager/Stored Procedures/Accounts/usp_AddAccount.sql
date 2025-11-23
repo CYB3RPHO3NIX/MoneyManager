@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [data].[AddAccount]
+﻿CREATE PROCEDURE [data].[usp_AddAccount]
     @UserId BIGINT,
     @AccountGroupId BIGINT,
     @Name VARCHAR(200),

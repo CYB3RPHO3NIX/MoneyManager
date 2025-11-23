@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [lookup].[AddCategory]
+﻿CREATE PROCEDURE [lookup].[usp_AddCategory]
     @Name         VARCHAR(200),
     @Description  VARCHAR(500) = NULL,
     @CreatedBy    BIGINT = NULL

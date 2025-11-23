@@ -1,0 +1,9 @@
+﻿CREATE TABLE [lookup].[Settings]
+(
+	[SettingId] BIGINT NOT NULL PRIMARY KEY IDENTITY,
+	[SectionName] VARCHAR(500) NOT NULL,
+	[SubSectionName] VARCHAR(500) NULL,
+	[Name] VARCHAR(500) NOT NULL,
+	[Value] VARCHAR(MAX) NOT NULL,
+	[Description] VARCHAR(1000) NULL,
+)

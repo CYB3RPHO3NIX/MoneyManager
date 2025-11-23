@@ -1,0 +1,14 @@
+﻿CREATE TABLE [identity].[Users]
+(
+	[UserId] BIGINT NOT NULL PRIMARY KEY IDENTITY,
+	[Username] VARCHAR(100) NOT NULL UNIQUE,
+	[Email] VARCHAR(200) NOT NULL,
+	[PasswordHash] VARCHAR(MAX) NOT NULL,
+	[PasswordSalt] VARCHAR(MAX) NOT NULL,
+	[IsActive] BIT NOT NULL DEFAULT 1,
+
+	[CreatedBy] BIGINT NULL,
+	[CreatedOn] DATETIME NULL,
+	[UpdatedBy] BIGINT NULL,
+	[UpdatedOn] DATETIME NULL
+)

@@ -64,6 +64,16 @@
     <Folder Include="Tables\data" />
     <Folder Include="Schemas" />
     <Folder Include="Triggers" />
+    <Folder Include="Stored Procedures\Accounts" />
+    <Folder Include="Stored Procedures\Users" />
+    <Folder Include="Stored Procedures\Transactions" />
+    <Folder Include="Stored Procedures\Categories" />
+    <Folder Include="Stored Procedures\AccountGroups" />
+    <Folder Include="Stored Procedures\Settings" />
+    <Folder Include="Stored Procedures\Cards" />
+    <Folder Include="Stored Procedures\Budgets" />
+    <Folder Include="Stored Procedures\SubCategories" />
+    <Folder Include="Stored Procedures\Common" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\identity\Users.sql" />
@@ -77,18 +87,21 @@
     <Build Include="Schemas\data.sql" />
     <Build Include="Schemas\lookup.sql" />
     <Build Include="Schemas\identity.sql" />
-    <Build Include="Stored Procedures\usp_AddUser.sql" />
     <Build Include="Tables\lookup\Settings.sql" />
-    <Build Include="Stored Procedures\usp_AddSetting.sql" />
-    <Build Include="Stored Procedures\usp_AddAccountGroup.sql" />
-    <Build Include="Stored Procedures\usp_AddCategory.sql" />
-    <Build Include="Stored Procedures\usp_AddSubCategory.sql" />
-    <Build Include="Stored Procedures\usp_AddAccount.sql" />
-    <Build Include="Stored Procedures\usp_AddBudget.sql" />
-    <Build Include="Stored Procedures\usp_AddCard.sql" />
-    <Build Include="Stored Procedures\usp_AddTransaction.sql" />
-    <Build Include="Stored Procedures\usp_UpdateTransaction.sql" />
-    <Build Include="Stored Procedures\usp_UpdateAccount.sql" />
+    <Build Include="Stored Procedures\Accounts\usp_AddAccount.sql" />
+    <Build Include="Stored Procedures\Users\usp_AddUser.sql" />
+    <Build Include="Stored Procedures\Transactions\usp_UpdateTransaction.sql" />
+    <Build Include="Stored Procedures\Transactions\usp_AddTransaction.sql" />
+    <Build Include="Stored Procedures\Accounts\usp_UpdateAccount.sql" />
+    <Build Include="Stored Procedures\Categories\usp_AddCategory.sql" />
+    <Build Include="Stored Procedures\AccountGroups\usp_AddAccountGroup.sql" />
+    <Build Include="Stored Procedures\Settings\usp_AddSetting.sql" />
+    <Build Include="Stored Procedures\Cards\usp_AddCard.sql" />
+    <Build Include="Stored Procedures\Budgets\usp_AddBudget.sql" />
+    <Build Include="Stored Procedures\SubCategories\usp_AddSubCategory.sql" />
+    <Build Include="Stored Procedures\Accounts\usp_DeleteTransaction.sql" />
+    <Build Include="Stored Procedures\Accounts\usp_GetTransactionById.sql" />
+    <Build Include="Stored Procedures\Common\usp_ExecuteXmlQuery.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MoneyManager.publish.xml" />
